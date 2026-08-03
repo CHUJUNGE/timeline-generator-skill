@@ -13,17 +13,11 @@
 
 ## 如何在 Codex 里安装
 
-如果这个 repo 地址是：
-
-```text
-https://github.com/你的组织/timeline-generator-skill
-```
-
 在 Codex 新任务里对 Codex 说：
 
 ```text
 请帮我从这个 GitHub 地址安装 timeline-generator skill：
-https://github.com/你的组织/timeline-generator-skill/tree/main/timeline-generator
+https://github.com/CHUJUNGE/timeline-generator-skill/tree/main/timeline-generator
 ```
 
 安装成功后，重启 Codex 或开启新任务，输入：
