@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Local scratch
+work/
+outputs/
+*.tmp
+*.log
+
+# Do not commit real client materials
+*Proposal*
+*Brief*
+*brief*
+*proposal*
+*会议纪要*
+*客户*

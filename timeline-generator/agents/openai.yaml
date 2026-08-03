@@ -1,0 +1,4 @@
+interface:
+  display_name: "Timeline Generator"
+  short_description: "Turn briefs/proposals into company-style timeline Excel files."
+  default_prompt: "Use $timeline-generator to read my brief/proposal, ask only necessary timing questions, draft the project timeline, and create the final Excel."
