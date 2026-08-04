@@ -26,6 +26,15 @@ https://github.com/CHUJUNGE/timeline-generator-skill/tree/main/timeline-generato
 Use $timeline-generator 帮我根据这个 proposal 做 timeline。
 ```
 
+## 如何更新到最新版
+
+后续如果这个 skill 有更新，在 Codex 新任务里对 Codex 说：
+
+```text
+请帮我更新 timeline-generator skill 到最新版：
+https://github.com/CHUJUNGE/timeline-generator-skill/tree/main/timeline-generator
+```
+
 ## 你可以怎么和 Codex 说
 
 ```text
