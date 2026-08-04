@@ -37,10 +37,11 @@ Unless the user has already provided a fully specified schedule, do not immediat
 
 1. Read the attached brief/proposal and extract a compact project understanding. If the proposal contains a rough timeline, preserve its big time and use it as the backbone.
 2. Present the understanding in chat: project goal, client/team, methods, sample/recruitment, deliverables, known big time, and unknowns that affect scheduling.
-3. Ask at most five plain-language follow-up questions. Ask fewer when the material is enough. Do not ask about details that can be reasonably inferred or marked as adjustable in the draft.
-4. After the user answers, draft a text timeline table in chat first. Make the phases, tasks, client actions, dates, and key assumptions visible.
-5. Invite natural-language correction by making it clear the user can say things like `把招募提前`, `客户要看 topline`, `这个不用客户确认`, or `改成甘特图`.
-6. Generate the final `.xlsx` only after the user approves the text draft or asks for direct output.
+3. Ask whether the client is a foreign company or a domestic Chinese client if this is not clear from the materials. Use bilingual Chinese/English output for foreign-company clients; use Chinese-only output for domestic Chinese clients.
+4. Ask at most five plain-language follow-up questions total. Ask fewer when the material is enough. Do not ask about details that can be reasonably inferred or marked as adjustable in the draft.
+5. After the user answers, draft a text timeline table in chat first. Make the phases, tasks, client actions, dates, and key assumptions visible.
+6. Invite natural-language correction by making it clear the user can say things like `把招募提前`, `客户要看 topline`, `这个不用客户确认`, or `改成甘特图`.
+7. Generate the final `.xlsx` only after the user approves the text draft or asks for direct output.
 
 If the user says to skip confirmation, generate the workbook directly but still apply the extraction, inference, and verification rules.
 
@@ -83,6 +84,7 @@ Use `assets/gantt-template.xlsx` and create a compact gantt workbook with:
 - a legend for task bars, milestones, client confirmation points, and holidays/buffers.
 - grouped task rows by phase.
 - date columns by day for short projects or week for longer projects.
+- day-by-day date columns by default unless the user explicitly asks for a weekly/monthly view or the sheet would become unreadable.
 - task owner/client involvement notes in fixed columns before the date grid.
 - milestones for kickoff, screener/research design confirmation, recruitment complete, fieldwork start/end, Topline, report delivery, and final presentation when applicable.
 
@@ -91,6 +93,7 @@ Respect the proposal's rough timeline and big time first. Add small times to exp
 ## Drafting Rules
 
 - Use Chinese human-readable dates: `1月5日-23日`, `2月10日前`, `12月25日递交`.
+- For foreign-company clients, provide bilingual Chinese/English task names, notes, and client actions. For domestic Chinese clients, use Chinese only.
 - Delivery, submission, confirmation, communication, and client feedback dates must not fall on weekends or official public holidays. If a proposal milestone lands on a non-working day, move it to the previous practical working day unless the user explicitly says the date is fixed.
 - Translate brief/proposal language into executable project steps. Do not copy vague proposal wording directly into the timeline when a concrete task name is needed.
 - Avoid over-promising exact dates when the source only gives a constraint. Use `预计`, `前后`, `待确认`, or a buffer note only when necessary.

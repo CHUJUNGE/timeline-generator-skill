@@ -21,6 +21,7 @@ Do not assume a screener, guide, sample table, or meeting notes exist. Use them 
 Extract:
 
 - project name and client/team.
+- whether the client is a foreign company or a domestic Chinese client, if visible from the materials.
 - project purpose and business/research questions.
 - research methods.
 - sample size, city/segment coverage, respondent types, or recruitment complexity.
@@ -59,6 +60,7 @@ Ask at most five questions in one turn. Use natural language, not a form. Ask fe
 
 Prioritize these questions:
 
+0. `这个客户是外企还是国内客户？如果是外企，我会在 timeline 里做中英文双语；如果是国内客户，我会用纯中文。`
 1. `项目预计什么时候 kickoff / 启动？`
 2. `最终报告或汇报有没有已经锁定的日期？`
 3. `客户需要高频参与吗，比如确认招募条件、看受访者名单、旁听访谈、看 Topline？`
@@ -66,6 +68,8 @@ Prioritize these questions:
 5. `有没有节假日、客户内部会、老板汇报、上市/发布等不能动的时间点？`
 
 If the proposal already has a rough timeline, do not re-ask for those dates. Ask only about missing constraints needed to refine the rough timeline. Do not ask for every missing detail. If a detail can be inferred, draft it and mark the assumption in chat.
+
+If the client type is not clear, ask it because it changes output language. Count it as one of the at-most-five questions.
 
 When drafting dates, never place delivery, submission, confirmation, or client feedback nodes on weekends or official public holidays. If a rough proposal milestone falls on a non-working day, tell the user you will move the client-facing node to the previous practical working day unless it is fixed.
 
@@ -88,6 +92,8 @@ When the proposal has a rough timeline, add a short line before the table:
 ```text
 我会以 proposal 中的粗时间线为主轴，下面主要是在每个阶段下补 small times 和协作节点。
 ```
+
+Use day-by-day dates by default unless the user explicitly asks for a weekly/monthly view. For foreign-company clients, make the draft bilingual Chinese/English; for domestic Chinese clients, keep it Chinese-only.
 
 ## Step 5: Support Natural-Language Revision
 

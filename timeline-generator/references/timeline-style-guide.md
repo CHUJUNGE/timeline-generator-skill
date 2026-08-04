@@ -12,6 +12,7 @@ Always separate:
 
 - Big time: contractual or proposal-level milestones, client business deadlines, kickoff, fieldwork window, Topline, report delivery, final presentation.
 - Small times: task-level work needed to hit big time, such as screener revision, recruitment profile updates, guide review, fieldwork scheduling, recap, analysis, and report iteration.
+- Date granularity: use day-by-day date columns by default. Use week/month buckets only when the user explicitly asks or when a long project would become unreadable.
 - Task blocks: major workstreams such as research design, recruitment, fieldwork, analysis, reporting.
 - Task breakdown: concrete actions within each block.
 - Responsibility split: what the internal team does, what the client needs to confirm or support, and what the client only needs to know.
@@ -57,22 +58,23 @@ Required visual elements:
 
 - title with project name.
 - fixed left task table: `Task Sections`, `Work Content`, `Note`, `Deliver date`.
-- visible legend: blue block = `Working process`; red block = `Delivery`.
-- date grid by day or week to the right of the task table.
+- visible legend: yellow block = `Working process`; green block = `Delivery`.
+- date grid by day to the right of the task table unless the user explicitly requests another granularity or the project is too long to read.
 - grouped phase/task rows.
-- blue bars for working-process duration.
-- red marks only on delivery / submission / confirmation days.
+- yellow bars for working-process duration.
+- green marks only on delivery / submission / confirmation days.
 - legend.
 - owner/client involvement columns.
 
-For short projects under six weeks, use day columns if readable. For longer projects, use week columns and milestone labels.
+Use day columns by default. For longer projects, keep daily columns if still readable; switch to week columns only when necessary or requested, and preserve exact milestone dates in labels.
 
 Template behavior:
 
 - Keep the bilingual style if the source project or client-facing expectation uses English; otherwise Chinese-only task names are acceptable.
-- Keep blue for process bars and red for delivery / confirmation / submission date cells.
+- Use bilingual Chinese/English task names, notes, and client actions for foreign-company clients. Use Chinese-only output for domestic Chinese clients.
+- Keep yellow for process bars and green for delivery / confirmation / submission date cells.
 - Do not mark fieldwork or IDI tasks red by default. Interviews are process work unless the user or proposal makes that specific interview date a client-facing delivery/critical milestone.
-- Keep red text for key delivery/confirmation rows only and the bottom note `Highlighted in RED are key milestones`.
+- Keep delivery/confirmation rows visually distinct only when they are true client-facing milestones. Do not use red as the default milestone color.
 - Keep holiday blocks when relevant; replace or remove them if the project does not cross a holiday.
 - Replace placeholder task rows rather than copying source project content.
 

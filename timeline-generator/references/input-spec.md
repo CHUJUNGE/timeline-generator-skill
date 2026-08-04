@@ -21,6 +21,7 @@ When both brief and proposal exist, use the proposal for committed project appro
 Extract the following if present:
 
 - project name, client name, and client short name.
+- client type: foreign company or domestic Chinese client, if identifiable.
 - background, project purpose, business question, and research question.
 - research methods, such as desk research, social listening, digital diary, IDI, FGD, ethnography, KOL interview, expert interview, or survey.
 - sample and recruitment scale, such as city count, group count, respondent count, segment definitions, and recruitment criteria.
@@ -37,6 +38,7 @@ Ask only for information that materially affects the schedule. Do not ask for al
 Highest-priority follow-up questions:
 
 - kickoff / start date.
+- whether the client is a foreign company or a domestic Chinese client, if unclear.
 - final report or final presentation date.
 - fixed intermediate milestones.
 - client involvement intensity.
@@ -47,8 +49,9 @@ Use plain Chinese questions. Avoid labels like `required field`, `input schema`,
 ## Defaults
 
 - Timeline type: `auto`.
-- Output language: Chinese.
+- Output language: ask client type if unclear. Use bilingual Chinese/English for foreign-company clients; use Chinese only for domestic Chinese clients.
 - Output format: local editable `.xlsx`.
+- Timeline date granularity: day-by-day dates by default unless the user explicitly requests week/month view or the date grid would be unreadable.
 - Internal team name: `睿丛`.
 - Version: client-facing unless the user says internal.
 - Client short name: infer from the client or brand name.
@@ -57,6 +60,7 @@ Use plain Chinese questions. Avoid labels like `required field`, `input schema`,
 ## Inference Rules
 
 - Proposal with clear final delivery but no small times: build backward from final delivery and reserve time for report writing, client feedback, and final polish.
+- Unless the user asks otherwise, build the timeline at daily date granularity first. Use weekly/monthly buckets only when necessary for readability or when requested.
 - Proposal with a rough timeline: keep its phase order and big time as the backbone, then add small times for design, recruitment, fieldwork setup, execution, analysis, reporting, feedback, and final polish.
 - Delivery, confirmation, submission, communication, and feedback nodes must be working days. Avoid weekends and official public holidays; move non-fixed client-facing nodes earlier to the previous practical working day.
 - Proposal with methods but no fieldwork date: place fieldwork after research design and recruitment confirmation, then leave analysis/reporting time before final delivery.
